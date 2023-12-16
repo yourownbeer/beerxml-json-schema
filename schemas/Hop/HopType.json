@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "Bittering",
+    "Aroma",
+    "Both"
+  ],
+  "title": "HopType",
+  "type": "string"
+}

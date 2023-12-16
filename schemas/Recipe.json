@@ -1,0 +1,398 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "TYPE": {
+      "$ref": "RecipeType.json"
+    },
+    "STYLE": {
+      "$ref": "Style/Style.json"
+    },
+    "EQUIPMENT": {
+      "anyOf": [
+        {
+          "$ref": "Equipment/Equipment.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "BREWER": {
+      "title": "Brewer",
+      "type": "string"
+    },
+    "ASST_BREWER": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Asst Brewer"
+    },
+    "BATCH_SIZE": {
+      "minimum": 0.0,
+      "title": "Batch Size",
+      "type": "number"
+    },
+    "BOIL_SIZE": {
+      "minimum": 0.0,
+      "title": "Boil Size",
+      "type": "number"
+    },
+    "BOIL_TIME": {
+      "minimum": 0,
+      "title": "Boil Time",
+      "type": "integer"
+    },
+    "EFFICIENCY": {
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Efficiency",
+      "type": "number"
+    },
+    "HOPS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Hop/Hop.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hops"
+    },
+    "FERMENTABLES": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Fermentable/Fermentable.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fermentables"
+    },
+    "MISCS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Misc/Misc.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Miscs"
+    },
+    "YEASTS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Yeast/Yeast.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Yeasts"
+    },
+    "WATERS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Water/Water.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Waters"
+    },
+    "MASH": {
+      "$ref": "Mash/Mash.json"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "TASTE_NOTES": {
+      "default": null,
+      "title": "Taste Notes",
+      "type": "string"
+    },
+    "TASTE_RATING": {
+      "default": null,
+      "title": "Taste Rating",
+      "type": "string"
+    },
+    "OG": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Og"
+    },
+    "FG": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fg"
+    },
+    "FERMENTATION_STAGES": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fermentation Stages"
+    },
+    "PRIMARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Age"
+    },
+    "PRIMARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Temp"
+    },
+    "SECONDARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Age"
+    },
+    "SECONDARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Temp"
+    },
+    "TERTIARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tertiary Age"
+    },
+    "TERTIARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tertiary Temp"
+    },
+    "AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Age"
+    },
+    "AGE_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Age Temp"
+    },
+    "DATE": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Date"
+    },
+    "CARBONATION": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carbonation"
+    },
+    "FORCED_CARBONATION": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Forced Carbonation"
+    },
+    "PRIMING_SUGAR_NAME": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Priming Sugar Name"
+    },
+    "CARBONATION_TEMP": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carbonation Temp"
+    },
+    "PRIMING_SUGAR_EQUIV": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Priming Sugar Equiv"
+    },
+    "KEG_PRIMING_FACTOR": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Keg Priming Factor"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "STYLE",
+    "BREWER",
+    "BATCH_SIZE",
+    "BOIL_SIZE",
+    "BOIL_TIME",
+    "EFFICIENCY",
+    "MASH"
+  ],
+  "title": "Recipe",
+  "type": "object"
+}

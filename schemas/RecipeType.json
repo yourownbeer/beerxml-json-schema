@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "EXTRACT",
+    "Partial Mash",
+    "All Grain"
+  ],
+  "title": "RecipeType",
+  "type": "string"
+}

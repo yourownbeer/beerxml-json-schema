@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "title": "Version",
+      "type": "string"
+    },
+    "AMOUNT": {
+      "exclusiveMinimum": 0.0,
+      "title": "Amount",
+      "type": "number"
+    },
+    "CALCIUM": {
+      "title": "Calcium",
+      "type": "number"
+    },
+    "BICARBONATE": {
+      "title": "Bicarbonate",
+      "type": "number"
+    },
+    "SULFATE": {
+      "title": "Sulfate",
+      "type": "number"
+    },
+    "CHLORIDE": {
+      "title": "Chloride",
+      "type": "number"
+    },
+    "SODIUM": {
+      "title": "Sodium",
+      "type": "number"
+    },
+    "MAGNESIUM": {
+      "title": "Magnesium",
+      "type": "number"
+    },
+    "PH": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Ph"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "AMOUNT",
+    "CALCIUM",
+    "BICARBONATE",
+    "SULFATE",
+    "CHLORIDE",
+    "SODIUM",
+    "MAGNESIUM",
+    "PH",
+    "NOTES"
+  ],
+  "title": "Water",
+  "type": "object"
+}

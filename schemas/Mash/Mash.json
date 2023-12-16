@@ -1,0 +1,117 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "GRAIN_TEMP": {
+      "title": "Grain Temp",
+      "type": "number"
+    },
+    "MASH_STEPS": {
+      "items": {
+        "$ref": "MashStep.json"
+      },
+      "title": "Mash Steps",
+      "type": "array"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "TUN_TEMP": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tun Temp"
+    },
+    "SPARGE_TEMP": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sparge Temp"
+    },
+    "PH": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ph"
+    },
+    "TUN_WEIGHT": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tun Weight"
+    },
+    "TUN_SPECIFIC_HEAT": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tun Specific Heat"
+    },
+    "EQUIP_ADJUST": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": false,
+      "title": "Equip Adjust"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "GRAIN_TEMP",
+    "MASH_STEPS"
+  ],
+  "title": "Mash",
+  "type": "object"
+}

@@ -1,0 +1,180 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "CATEGORY": {
+      "title": "Category",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "CATEGORY_NUMBER": {
+      "title": "Category Number",
+      "type": "integer"
+    },
+    "STYLE_LETTER": {
+      "title": "Style Letter",
+      "type": "string"
+    },
+    "STYLE_GUIDE": {
+      "title": "Style Guide",
+      "type": "string"
+    },
+    "TYPE": {
+      "$ref": "StyleType.json"
+    },
+    "OG_MIN": {
+      "title": "Og Min",
+      "type": "number"
+    },
+    "OG_MAX": {
+      "title": "Og Max",
+      "type": "number"
+    },
+    "FG_MIN": {
+      "title": "Fg Min",
+      "type": "number"
+    },
+    "FG_MAX": {
+      "title": "Fg Max",
+      "type": "number"
+    },
+    "IBU_MIN": {
+      "title": "Ibu Min",
+      "type": "number"
+    },
+    "IBU_MAX": {
+      "title": "Ibu Max",
+      "type": "number"
+    },
+    "COLOR_MIN": {
+      "title": "Color Min",
+      "type": "number"
+    },
+    "COLOR_MAX": {
+      "title": "Color Max",
+      "type": "number"
+    },
+    "CARB_MIN": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carb Min"
+    },
+    "CARB_MAX": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carb Max"
+    },
+    "ABV_MIN": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Abv Min"
+    },
+    "ABV_MAX": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Abv Max"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "PROFILE": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Profile"
+    },
+    "INGREDIENTS": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ingredients"
+    },
+    "EXAMPLES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Examples"
+    }
+  },
+  "required": [
+    "NAME",
+    "CATEGORY",
+    "VERSION",
+    "CATEGORY_NUMBER",
+    "STYLE_LETTER",
+    "STYLE_GUIDE",
+    "TYPE",
+    "OG_MIN",
+    "OG_MAX",
+    "FG_MIN",
+    "FG_MAX",
+    "IBU_MIN",
+    "IBU_MAX",
+    "COLOR_MIN",
+    "COLOR_MAX"
+  ],
+  "title": "Style",
+  "type": "object"
+}

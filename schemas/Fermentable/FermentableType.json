@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "Grain",
+    "Sugar",
+    "Extract",
+    "Dry Extract",
+    "Adjunct"
+  ],
+  "title": "FermentableType",
+  "type": "string"
+}

@@ -1,0 +1,12 @@
+{
+  "enum": [
+    "Lager",
+    "Ale",
+    "Mead",
+    "Wheat",
+    "Mixed",
+    "Cider"
+  ],
+  "title": "StyleType",
+  "type": "string"
+}

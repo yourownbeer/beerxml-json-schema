@@ -1,0 +1,183 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "TYPE": {
+      "$ref": "FermentableType.json"
+    },
+    "AMOUNT": {
+      "exclusiveMinimum": 0.0,
+      "title": "Amount",
+      "type": "number"
+    },
+    "YIELD": {
+      "maximum": 100.0,
+      "minimum": 1.0,
+      "title": "Yield",
+      "type": "number"
+    },
+    "COLOR": {
+      "minimum": 0.0,
+      "title": "Color",
+      "type": "number"
+    },
+    "ADD_AFTER_BOIL": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": false,
+      "title": "Add After Boil"
+    },
+    "ORIGIN": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Origin"
+    },
+    "SUPPLIER": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Supplier"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "COARSE_FINE_DIFF": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Coarse Fine Diff"
+    },
+    "MOISTURE": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Moisture"
+    },
+    "DIASTATIC_POWER": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Diastatic Power"
+    },
+    "PROTEIN": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Protein"
+    },
+    "MAX_IN_BATCH": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max In Batch"
+    },
+    "RECOMMEND_MASH": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recommend Mash"
+    },
+    "IBU_GAL_PER_LB": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ibu Gal Per Lb"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "AMOUNT",
+    "YIELD",
+    "COLOR"
+  ],
+  "title": "Fermentable",
+  "type": "object"
+}

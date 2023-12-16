@@ -1,0 +1,184 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "ALPHA": {
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Alpha",
+      "type": "number"
+    },
+    "AMOUNT": {
+      "exclusiveMinimum": 0.0,
+      "title": "Amount",
+      "type": "number"
+    },
+    "USE": {
+      "$ref": "hopUse.json"
+    },
+    "TIME": {
+      "title": "Time",
+      "type": "integer"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "TYPE": {
+      "anyOf": [
+        {
+          "$ref": "HopType.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "FORM": {
+      "anyOf": [
+        {
+          "$ref": "HopForm.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "BETA": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Beta"
+    },
+    "HSI": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hsi"
+    },
+    "ORIGIN": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Origin"
+    },
+    "SUBSTITUTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Substitutes"
+    },
+    "HUMULENE": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Humulene"
+    },
+    "CARYOPHYLLENE": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Caryophyllene"
+    },
+    "COHUMULONE": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Cohumulone"
+    },
+    "MYRCENE": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Myrcene"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "ALPHA",
+    "AMOUNT",
+    "USE",
+    "TIME"
+  ],
+  "title": "Hop",
+  "type": "object"
+}

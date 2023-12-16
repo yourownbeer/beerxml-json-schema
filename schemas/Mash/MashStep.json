@@ -1,0 +1,66 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "TYPE": {
+      "$ref": "MashStepType.json"
+    },
+    "INFUSE_AMOUNT": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Infuse Amount"
+    },
+    "STEP_TEMP": {
+      "title": "Step Temp",
+      "type": "number"
+    },
+    "STEP_TIME": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Step Time"
+    },
+    "RAMP_TIME": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ramp Time"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "STEP_TEMP",
+    "STEP_TIME"
+  ],
+  "title": "MashStep",
+  "type": "object"
+}

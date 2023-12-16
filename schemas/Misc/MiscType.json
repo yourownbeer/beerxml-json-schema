@@ -1,0 +1,12 @@
+{
+  "enum": [
+    "Spice",
+    "Finning",
+    "Water Agent",
+    "herb",
+    "flavor",
+    "other"
+  ],
+  "title": "MiscType",
+  "type": "string"
+}

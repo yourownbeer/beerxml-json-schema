@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "Ale",
+    "Lager",
+    "Wheat",
+    "Wine",
+    "Champagne"
+  ],
+  "title": "YeastType",
+  "type": "string"
+}

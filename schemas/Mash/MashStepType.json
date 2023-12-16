@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "Infusion",
+    "Temperature",
+    "Decoction"
+  ],
+  "title": "MashStepType",
+  "type": "string"
+}

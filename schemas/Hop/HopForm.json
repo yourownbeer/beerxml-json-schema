@@ -1,0 +1,9 @@
+{
+  "enum": [
+    "Pellet",
+    "Plug",
+    "Leaf"
+  ],
+  "title": "HopForm",
+  "type": "string"
+}

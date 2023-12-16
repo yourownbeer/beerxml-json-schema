@@ -1,0 +1,11 @@
+{
+  "enum": [
+    "Boil",
+    "Dry Hop",
+    "Mash",
+    "First Wort",
+    "Aroma"
+  ],
+  "title": "HopUse",
+  "type": "string"
+}

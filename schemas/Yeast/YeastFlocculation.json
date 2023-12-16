@@ -1,0 +1,10 @@
+{
+  "enum": [
+    "Low",
+    "Medium",
+    "High",
+    "Very High"
+  ],
+  "title": "YeastFlocculation",
+  "type": "string"
+}

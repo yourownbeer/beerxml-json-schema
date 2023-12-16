@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "title": "Version",
+      "type": "string"
+    },
+    "TYPE": {
+      "$ref": "MiscType.json"
+    },
+    "USE": {
+      "$ref": "MiscUse.json"
+    },
+    "TIME": {
+      "title": "Time",
+      "type": "integer"
+    },
+    "AMOUNT": {
+      "title": "Amount",
+      "type": "number"
+    },
+    "AMOUNT_IS_WEIGHT": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": false,
+      "title": "Amount Is Weight"
+    },
+    "USE_FOR": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Use For"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "USE",
+    "TIME",
+    "AMOUNT",
+    "USE_FOR",
+    "NOTES"
+  ],
+  "title": "Misc",
+  "type": "object"
+}

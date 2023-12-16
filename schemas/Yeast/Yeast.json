@@ -1,0 +1,175 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "TYPE": {
+      "$ref": "YeastType.json"
+    },
+    "AMOUNT": {
+      "exclusiveMinimum": 0.0,
+      "title": "Amount",
+      "type": "number"
+    },
+    "AMOUNT_IS_WEIGHT": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": false,
+      "title": "Amount Is Weight"
+    },
+    "LABORATORY": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Laboratory"
+    },
+    "PRODUCT_ID": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Product Id"
+    },
+    "MIN_TEMPERATURE": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Min Temperature"
+    },
+    "MAX_TEMPERATURE": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max Temperature"
+    },
+    "FLOCCULATION": {
+      "anyOf": [
+        {
+          "$ref": "YeastFlocculation.json"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "ATTENUATION": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Attenuation"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "BEST_FOR": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Best For"
+    },
+    "TIMES_CULTURED": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Times Cultured"
+    },
+    "MAX_REUSE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Max Reuse"
+    },
+    "ADD_TO_SECONDARY": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": false,
+      "title": "Add To Secondary"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "AMOUNT"
+  ],
+  "title": "Yeast",
+  "type": "object"
+}

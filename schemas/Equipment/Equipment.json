@@ -1,0 +1,178 @@
+{
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "BOIL_SIZE": {
+      "title": "Boil Size",
+      "type": "number"
+    },
+    "BATCH_SIZE": {
+      "title": "Batch Size",
+      "type": "number"
+    },
+    "TUN_VOLUME": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Tun Volume"
+    },
+    "TUN_WEIGHT": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Tun Weight"
+    },
+    "TUN_SPECIFIC_HEAT": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Tun Specific Heat"
+    },
+    "TOP_UP_WATER": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Top Up Water"
+    },
+    "TRUB_CHILLER_LOSS": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Trub Chiller Loss"
+    },
+    "EVAP_RATE": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Evap Rate"
+    },
+    "BOIL_TIME": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Boil Time"
+    },
+    "CALC_BOIL_VOLUME": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Calc Boil Volume"
+    },
+    "LAUTER_DEADSPACE": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Lauter Deadspace"
+    },
+    "TOP_UP_KETTLE": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Top Up Kettle"
+    },
+    "HOP_UTILIZATION": {
+      "anyOf": [
+        {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Hop Utilization"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Notes"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "BOIL_SIZE",
+    "BATCH_SIZE",
+    "TUN_VOLUME",
+    "TUN_WEIGHT",
+    "TUN_SPECIFIC_HEAT",
+    "TOP_UP_WATER",
+    "TRUB_CHILLER_LOSS",
+    "EVAP_RATE",
+    "BOIL_TIME",
+    "CALC_BOIL_VOLUME",
+    "LAUTER_DEADSPACE",
+    "TOP_UP_KETTLE",
+    "HOP_UTILIZATION",
+    "NOTES"
+  ],
+  "title": "Equipment",
+  "type": "object"
+}
