@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "MASH_STEP": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "MashStep.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "MashStep"
+    }
+  },
+  "required": [
+    "MASH_STEP"
+  ],
+  "title": "MashStep",
+  "type": "object"
+}

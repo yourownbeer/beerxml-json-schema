@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "MISC": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Misc.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Misc"
+    }
+  },
+  "required": [
+    "MISC"
+  ],
+  "title": "Miscs",
+  "type": "object"
+}

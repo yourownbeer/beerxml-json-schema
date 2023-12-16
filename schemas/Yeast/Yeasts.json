@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "YEAST": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Yeast.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Yeast"
+    }
+  },
+  "required": [
+    "YEAST"
+  ],
+  "title": "Yeasts",
+  "type": "object"
+}

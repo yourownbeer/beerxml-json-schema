@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "FERMENTABLE": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Fermentable.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Fermentable"
+    }
+  },
+  "required": [
+    "FERMENTABLE"
+  ],
+  "title": "Fermentables",
+  "type": "object"
+}

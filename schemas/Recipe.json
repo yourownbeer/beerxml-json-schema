@@ -67,25 +67,18 @@
     "HOPS": {
       "anyOf": [
         {
-          "items": {
-            "$ref": "Hop/Hop.json"
-          },
-          "type": "array"
+          "$ref": "Hop/Hops.json"
         },
         {
           "type": "null"
         }
       ],
-      "default": null,
-      "title": "Hops"
+      "default": null
     },
     "FERMENTABLES": {
       "anyOf": [
         {
-          "items": {
-            "$ref": "Fermentable/Fermentable.json"
-          },
-          "type": "array"
+          "$ref": "Fermentable/Fermentables.json"
         },
         {
           "type": "null"
@@ -97,10 +90,7 @@
     "MISCS": {
       "anyOf": [
         {
-          "items": {
-            "$ref": "Misc/Misc.json"
-          },
-          "type": "array"
+          "$ref": "Misc/Miscs.json"
         },
         {
           "type": "null"
@@ -112,10 +102,7 @@
     "YEASTS": {
       "anyOf": [
         {
-          "items": {
-            "$ref": "Yeast/Yeast.json"
-          },
-          "type": "array"
+          "$ref": "Yeast/Yeasts.json"
         },
         {
           "type": "null"
@@ -127,10 +114,7 @@
     "WATERS": {
       "anyOf": [
         {
-          "items": {
-            "$ref": "Water/Water.json"
-          },
-          "type": "array"
+          "$ref": "Water/Waters.json"
         },
         {
           "type": "null"

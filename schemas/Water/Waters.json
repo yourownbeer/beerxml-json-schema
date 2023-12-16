@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "WATER": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "Water.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Water"
+    }
+  },
+  "required": [
+    "WATER"
+  ],
+  "title": "Waters",
+  "type": "object"
+}
