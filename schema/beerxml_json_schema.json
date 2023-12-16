@@ -1,0 +1,1747 @@
+{
+  "$defs": {
+    "Equipment": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "BOIL_SIZE": {
+          "title": "Boil Size",
+          "type": "number"
+        },
+        "BATCH_SIZE": {
+          "title": "Batch Size",
+          "type": "number"
+        },
+        "TUN_VOLUME": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tun Volume"
+        },
+        "TUN_WEIGHT": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tun Weight"
+        },
+        "TUN_SPECIFIC_HEAT": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Tun Specific Heat"
+        },
+        "TOP_UP_WATER": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Top Up Water"
+        },
+        "TRUB_CHILLER_LOSS": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Trub Chiller Loss"
+        },
+        "EVAP_RATE": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Evap Rate"
+        },
+        "BOIL_TIME": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Boil Time"
+        },
+        "CALC_BOIL_VOLUME": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Calc Boil Volume"
+        },
+        "LAUTER_DEADSPACE": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Lauter Deadspace"
+        },
+        "TOP_UP_KETTLE": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Top Up Kettle"
+        },
+        "HOP_UTILIZATION": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Hop Utilization"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "BOIL_SIZE",
+        "BATCH_SIZE",
+        "TUN_VOLUME",
+        "TUN_WEIGHT",
+        "TUN_SPECIFIC_HEAT",
+        "TOP_UP_WATER",
+        "TRUB_CHILLER_LOSS",
+        "EVAP_RATE",
+        "BOIL_TIME",
+        "CALC_BOIL_VOLUME",
+        "LAUTER_DEADSPACE",
+        "TOP_UP_KETTLE",
+        "HOP_UTILIZATION",
+        "NOTES"
+      ],
+      "title": "Equipment",
+      "type": "object"
+    },
+    "Fermentable": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "TYPE": {
+          "$ref": "#/$defs/FermentableType"
+        },
+        "AMOUNT": {
+          "exclusiveMinimum": 0.0,
+          "title": "Amount",
+          "type": "number"
+        },
+        "YIELD": {
+          "maximum": 100.0,
+          "minimum": 1.0,
+          "title": "Yield",
+          "type": "number"
+        },
+        "COLOR": {
+          "minimum": 0.0,
+          "title": "Color",
+          "type": "number"
+        },
+        "ADD_AFTER_BOIL": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Add After Boil"
+        },
+        "ORIGIN": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Origin"
+        },
+        "SUPPLIER": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supplier"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "COARSE_FINE_DIFF": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Coarse Fine Diff"
+        },
+        "MOISTURE": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Moisture"
+        },
+        "DIASTATIC_POWER": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Diastatic Power"
+        },
+        "PROTEIN": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Protein"
+        },
+        "MAX_IN_BATCH": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max In Batch"
+        },
+        "RECOMMEND_MASH": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommend Mash"
+        },
+        "IBU_GAL_PER_LB": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ibu Gal Per Lb"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "TYPE",
+        "AMOUNT",
+        "YIELD",
+        "COLOR"
+      ],
+      "title": "Fermentable",
+      "type": "object"
+    },
+    "FermentableType": {
+      "enum": [
+        "Grain",
+        "Sugar",
+        "Extract",
+        "Dry Extract",
+        "Adjunct"
+      ],
+      "title": "FermentableType",
+      "type": "string"
+    },
+    "Flocculation": {
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Very High"
+      ],
+      "title": "Flocculation",
+      "type": "string"
+    },
+    "Hop": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "ALPHA": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Alpha",
+          "type": "number"
+        },
+        "AMOUNT": {
+          "exclusiveMinimum": 0.0,
+          "title": "Amount",
+          "type": "number"
+        },
+        "USE": {
+          "$ref": "#/$defs/HopUse"
+        },
+        "TIME": {
+          "title": "Time",
+          "type": "integer"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "TYPE": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HopType"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "FORM": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/HopForm"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "BETA": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Beta"
+        },
+        "HSI": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Hsi"
+        },
+        "ORIGIN": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Origin"
+        },
+        "SUBSTITUTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Substitutes"
+        },
+        "HUMULENE": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Humulene"
+        },
+        "CARYOPHYLLENE": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Caryophyllene"
+        },
+        "COHUMULONE": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cohumulone"
+        },
+        "MYRCENE": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 1.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Myrcene"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "ALPHA",
+        "AMOUNT",
+        "USE",
+        "TIME"
+      ],
+      "title": "Hop",
+      "type": "object"
+    },
+    "HopForm": {
+      "enum": [
+        "Pellet",
+        "Plug",
+        "Leaf"
+      ],
+      "title": "HopForm",
+      "type": "string"
+    },
+    "HopType": {
+      "enum": [
+        "Bittering",
+        "Aroma",
+        "Both"
+      ],
+      "title": "HopType",
+      "type": "string"
+    },
+    "HopUse": {
+      "enum": [
+        "Boil",
+        "Dry Hop",
+        "Mash",
+        "First Wort",
+        "Aroma"
+      ],
+      "title": "HopUse",
+      "type": "string"
+    },
+    "Mash": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "GRAIN_TEMP": {
+          "title": "Grain Temp",
+          "type": "number"
+        },
+        "MASH_STEPS": {
+          "items": {
+            "$ref": "#/$defs/MashStep"
+          },
+          "title": "Mash Steps",
+          "type": "array"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "TUN_TEMP": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tun Temp"
+        },
+        "SPARGE_TEMP": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sparge Temp"
+        },
+        "PH": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ph"
+        },
+        "TUN_WEIGHT": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tun Weight"
+        },
+        "TUN_SPECIFIC_HEAT": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tun Specific Heat"
+        },
+        "EQUIP_ADJUST": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Equip Adjust"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "GRAIN_TEMP",
+        "MASH_STEPS"
+      ],
+      "title": "Mash",
+      "type": "object"
+    },
+    "MashStep": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "TYPE": {
+          "$ref": "#/$defs/MashStepType"
+        },
+        "INFUSE_AMOUNT": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Infuse Amount"
+        },
+        "STEP_TEMP": {
+          "title": "Step Temp",
+          "type": "number"
+        },
+        "STEP_TIME": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Step Time"
+        },
+        "RAMP_TIME": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ramp Time"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "TYPE",
+        "STEP_TEMP",
+        "STEP_TIME"
+      ],
+      "title": "MashStep",
+      "type": "object"
+    },
+    "MashStepType": {
+      "enum": [
+        "Infusion",
+        "Temperature",
+        "Decoction"
+      ],
+      "title": "MashStepType",
+      "type": "string"
+    },
+    "Misc": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "title": "Version",
+          "type": "string"
+        },
+        "TYPE": {
+          "$ref": "#/$defs/MiscType"
+        },
+        "USE": {
+          "$ref": "#/$defs/MiscUse"
+        },
+        "TIME": {
+          "title": "Time",
+          "type": "integer"
+        },
+        "AMOUNT": {
+          "title": "Amount",
+          "type": "number"
+        },
+        "AMOUNT_IS_WEIGHT": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Amount Is Weight"
+        },
+        "USE_FOR": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Use For"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "TYPE",
+        "USE",
+        "TIME",
+        "AMOUNT",
+        "USE_FOR",
+        "NOTES"
+      ],
+      "title": "Misc",
+      "type": "object"
+    },
+    "MiscType": {
+      "enum": [
+        "Spice",
+        "Finning",
+        "Water Agent",
+        "herb",
+        "flavor",
+        "other"
+      ],
+      "title": "MiscType",
+      "type": "string"
+    },
+    "MiscUse": {
+      "enum": [
+        "boil",
+        "mash",
+        "primary",
+        "secondary",
+        "bottling"
+      ],
+      "title": "MiscUse",
+      "type": "string"
+    },
+    "RecipeType": {
+      "enum": [
+        "EXTRACT",
+        "Partial Mash",
+        "All Grain"
+      ],
+      "title": "RecipeType",
+      "type": "string"
+    },
+    "Style": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "CATEGORY": {
+          "title": "Category",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "CATEGORY_NUMBER": {
+          "title": "Category Number",
+          "type": "integer"
+        },
+        "STYLE_LETTER": {
+          "title": "Style Letter",
+          "type": "string"
+        },
+        "STYLE_GUIDE": {
+          "title": "Style Guide",
+          "type": "string"
+        },
+        "TYPE": {
+          "$ref": "#/$defs/StyleType"
+        },
+        "OG_MIN": {
+          "title": "Og Min",
+          "type": "number"
+        },
+        "OG_MAX": {
+          "title": "Og Max",
+          "type": "number"
+        },
+        "FG_MIN": {
+          "title": "Fg Min",
+          "type": "number"
+        },
+        "FG_MAX": {
+          "title": "Fg Max",
+          "type": "number"
+        },
+        "IBU_MIN": {
+          "title": "Ibu Min",
+          "type": "number"
+        },
+        "IBU_MAX": {
+          "title": "Ibu Max",
+          "type": "number"
+        },
+        "COLOR_MIN": {
+          "title": "Color Min",
+          "type": "number"
+        },
+        "COLOR_MAX": {
+          "title": "Color Max",
+          "type": "number"
+        },
+        "CARB_MIN": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Carb Min"
+        },
+        "CARB_MAX": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Carb Max"
+        },
+        "ABV_MIN": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Abv Min"
+        },
+        "ABV_MAX": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Abv Max"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "PROFILE": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Profile"
+        },
+        "INGREDIENTS": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ingredients"
+        },
+        "EXAMPLES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Examples"
+        }
+      },
+      "required": [
+        "NAME",
+        "CATEGORY",
+        "VERSION",
+        "CATEGORY_NUMBER",
+        "STYLE_LETTER",
+        "STYLE_GUIDE",
+        "TYPE",
+        "OG_MIN",
+        "OG_MAX",
+        "FG_MIN",
+        "FG_MAX",
+        "IBU_MIN",
+        "IBU_MAX",
+        "COLOR_MIN",
+        "COLOR_MAX"
+      ],
+      "title": "Style",
+      "type": "object"
+    },
+    "StyleType": {
+      "enum": [
+        "Lager",
+        "Ale",
+        "Mead",
+        "Wheat",
+        "Mixed",
+        "Cider"
+      ],
+      "title": "StyleType",
+      "type": "string"
+    },
+    "Water": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "title": "Version",
+          "type": "string"
+        },
+        "AMOUNT": {
+          "exclusiveMinimum": 0.0,
+          "title": "Amount",
+          "type": "number"
+        },
+        "CALCIUM": {
+          "title": "Calcium",
+          "type": "number"
+        },
+        "BICARBONATE": {
+          "title": "Bicarbonate",
+          "type": "number"
+        },
+        "SULFATE": {
+          "title": "Sulfate",
+          "type": "number"
+        },
+        "CHLORIDE": {
+          "title": "Chloride",
+          "type": "number"
+        },
+        "SODIUM": {
+          "title": "Sodium",
+          "type": "number"
+        },
+        "MAGNESIUM": {
+          "title": "Magnesium",
+          "type": "number"
+        },
+        "PH": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Ph"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Notes"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "AMOUNT",
+        "CALCIUM",
+        "BICARBONATE",
+        "SULFATE",
+        "CHLORIDE",
+        "SODIUM",
+        "MAGNESIUM",
+        "PH",
+        "NOTES"
+      ],
+      "title": "Water",
+      "type": "object"
+    },
+    "Yeast": {
+      "properties": {
+        "NAME": {
+          "title": "Name",
+          "type": "string"
+        },
+        "VERSION": {
+          "maximum": 1,
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        },
+        "TYPE": {
+          "$ref": "#/$defs/YeastType"
+        },
+        "AMOUNT": {
+          "exclusiveMinimum": 0.0,
+          "title": "Amount",
+          "type": "number"
+        },
+        "AMOUNT_IS_WEIGHT": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Amount Is Weight"
+        },
+        "LABORATORY": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Laboratory"
+        },
+        "PRODUCT_ID": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Product Id"
+        },
+        "MIN_TEMPERATURE": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Temperature"
+        },
+        "MAX_TEMPERATURE": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Temperature"
+        },
+        "FLOCCULATION": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/Flocculation"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "ATTENUATION": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Attenuation"
+        },
+        "NOTES": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notes"
+        },
+        "BEST_FOR": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Best For"
+        },
+        "TIMES_CULTURED": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Times Cultured"
+        },
+        "MAX_REUSE": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Reuse"
+        },
+        "ADD_TO_SECONDARY": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false,
+          "title": "Add To Secondary"
+        }
+      },
+      "required": [
+        "NAME",
+        "VERSION",
+        "TYPE",
+        "AMOUNT"
+      ],
+      "title": "Yeast",
+      "type": "object"
+    },
+    "YeastType": {
+      "enum": [
+        "Ale",
+        "Lager",
+        "Wheat",
+        "Wine",
+        "Champagne"
+      ],
+      "title": "YeastType",
+      "type": "string"
+    }
+  },
+  "properties": {
+    "NAME": {
+      "title": "Name",
+      "type": "string"
+    },
+    "VERSION": {
+      "maximum": 1,
+      "minimum": 1,
+      "title": "Version",
+      "type": "integer"
+    },
+    "TYPE": {
+      "$ref": "#/$defs/RecipeType"
+    },
+    "STYLE": {
+      "$ref": "#/$defs/Style"
+    },
+    "EQUIPMENT": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Equipment"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "BREWER": {
+      "title": "Brewer",
+      "type": "string"
+    },
+    "ASST_BREWER": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Asst Brewer"
+    },
+    "BATCH_SIZE": {
+      "minimum": 0.0,
+      "title": "Batch Size",
+      "type": "number"
+    },
+    "BOIL_SIZE": {
+      "minimum": 0.0,
+      "title": "Boil Size",
+      "type": "number"
+    },
+    "BOIL_TIME": {
+      "minimum": 0,
+      "title": "Boil Time",
+      "type": "integer"
+    },
+    "EFFICIENCY": {
+      "maximum": 100.0,
+      "minimum": 0.0,
+      "title": "Efficiency",
+      "type": "number"
+    },
+    "HOPS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Hop"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Hops"
+    },
+    "FERMENTABLES": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Fermentable"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fermentables"
+    },
+    "MISCS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Misc"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Miscs"
+    },
+    "YEASTS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Yeast"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Yeasts"
+    },
+    "WATERS": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/Water"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Waters"
+    },
+    "MASH": {
+      "$ref": "#/$defs/Mash"
+    },
+    "NOTES": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "TASTE_NOTES": {
+      "default": null,
+      "title": "Taste Notes",
+      "type": "string"
+    },
+    "TASTE_RATING": {
+      "default": null,
+      "title": "Taste Rating",
+      "type": "string"
+    },
+    "OG": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Og"
+    },
+    "FG": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fg"
+    },
+    "FERMENTATION_STAGES": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Fermentation Stages"
+    },
+    "PRIMARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Age"
+    },
+    "PRIMARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Primary Temp"
+    },
+    "SECONDARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Age"
+    },
+    "SECONDARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Secondary Temp"
+    },
+    "TERTIARY_AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tertiary Age"
+    },
+    "TERTIARY_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tertiary Temp"
+    },
+    "AGE": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Age"
+    },
+    "AGE_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Age Temp"
+    },
+    "DATE": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Date"
+    },
+    "CARBONATION": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carbonation"
+    },
+    "FORCED_CARBONATION": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Forced Carbonation"
+    },
+    "PRIMING_SUGAR_NAME": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Priming Sugar Name"
+    },
+    "CARBONATION_TEMP": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Carbonation Temp"
+    },
+    "PRIMING_SUGAR_EQUIV": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Priming Sugar Equiv"
+    },
+    "KEG_PRIMING_FACTOR": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Keg Priming Factor"
+    }
+  },
+  "required": [
+    "NAME",
+    "VERSION",
+    "TYPE",
+    "STYLE",
+    "BREWER",
+    "BATCH_SIZE",
+    "BOIL_SIZE",
+    "BOIL_TIME",
+    "EFFICIENCY",
+    "MASH"
+  ],
+  "title": "Recipe",
+  "type": "object"
+}
