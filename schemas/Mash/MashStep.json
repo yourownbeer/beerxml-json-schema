@@ -52,6 +52,18 @@
       ],
       "default": null,
       "title": "Ramp Time"
+    },
+    "END_TEMP": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Ramp Time"
     }
   },
   "required": [

@@ -63,9 +63,7 @@
     "TYPE",
     "USE",
     "TIME",
-    "AMOUNT",
-    "USE_FOR",
-    "NOTES"
+    "AMOUNT"
   ],
   "title": "Misc",
   "type": "object"
