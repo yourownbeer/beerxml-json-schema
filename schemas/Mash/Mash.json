@@ -15,7 +15,18 @@
       "type": "number"
     },
     "MASH_STEPS": {
-      "$ref": "MashSteps.json"
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "MashStep.json"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "MashSteps"
     },
     "NOTES": {
       "anyOf": [

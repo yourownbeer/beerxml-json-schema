@@ -16,4 +16,4 @@ To integrate the BeerXML JSON schema into your project, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/beerxml-json-schema.git
+   git clone https://github.com/yourownbeer/beerxml-json-schema.git
