@@ -3,9 +3,9 @@
     "Spice",
     "Finning",
     "Water Agent",
-    "herb",
-    "flavor",
-    "other"
+    "Herb",
+    "Flavor",
+    "Other"
   ],
   "title": "MiscType",
   "type": "string"
