@@ -161,7 +161,9 @@
     "TASTE_RATING": {
       "default": null,
       "title": "Taste Rating",
-      "type": "string"
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 50
     },
     "OG": {
       "anyOf": [
