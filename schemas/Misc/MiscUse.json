@@ -1,10 +1,10 @@
 {
   "enum": [
-    "boil",
-    "mash",
-    "primary",
-    "secondary",
-    "bottling"
+    "Boil",
+    "Mash",
+    "Primary",
+    "Secondary",
+    "Bottling"
   ],
   "title": "MiscUse",
   "type": "string"

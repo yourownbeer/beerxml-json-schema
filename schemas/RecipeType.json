@@ -1,6 +1,6 @@
 {
   "enum": [
-    "EXTRACT",
+    "Extract",
     "Partial Mash",
     "All Grain"
   ],
