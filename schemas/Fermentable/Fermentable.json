@@ -20,7 +20,7 @@
     },
     "YIELD": {
       "maximum": 100.0,
-      "minimum": 1.0,
+      "minimum": 0.0,
       "title": "Yield",
       "type": "number"
     },
